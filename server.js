@@ -32,11 +32,11 @@ app.get("/greeting/:name", function (req, res) {
 app.get("/tip/:total/:tipPercentage", function (req, res) {
   console.log(req.params);
   res.send(
-    "The total is " +
+    "The total is $" +
       req.params.total +
       ". The tip per centage is " +
       req.params.tipPercentage +
-      "%. The tip is " +
+      "%. The tip is $" +
       req.params.total * (req.params.tipPercentage / 100)
   );
   console.log("Tip Calculator express application created.");
